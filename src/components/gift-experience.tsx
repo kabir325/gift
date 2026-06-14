@@ -72,8 +72,8 @@ const questions: Question[] = [
 
 const slides = [
   {
-    title: "A Soft Start",
-    text: "I wanted to make you something that felt slower than a message and softer than a speech. Something you could hold for a moment and feel, not just read.",
+    title: "I Love You",
+    text: "Let me remove the word 'love' between I and You.\n\n How can love follow the word I?\n\n And how can it come before You? \n\n As when there's love, what else is there except love? \n\n And when there is You, I forget about myself and even about love itself."
   },
   {
     title: "What I Hope Reaches You",
