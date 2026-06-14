@@ -536,81 +536,58 @@ export default function GiftExperience() {
 
       {stage === "questions" && currentQuestion ? (
         <section className="relative flex min-h-[100svh] items-center justify-center px-4 py-6 sm:px-6 sm:py-16">
-          <div className="grid w-full max-w-6xl gap-6 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="order-2 lg:order-1">
-              <div className="mx-auto max-w-xl rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] p-5 shadow-[0_40px_140px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2rem] sm:p-8">
-                <p className="text-xs uppercase tracking-[0.45em] text-rose-200/75">For Her</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {eraBracelet.slice(0, 4).map((era) => (
-                    <span
-                      key={era}
-                      className="rounded-full border border-white/10 bg-black/15 px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-white/72"
-                    >
-                      {era}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-6 flex gap-2">
-                  {questions.map((question, index) => {
-                    const isActive = index === step;
-                    const isPast = index < step;
-
-                    return (
-                      <div
-                        key={question.id}
-                        className={`h-2 flex-1 rounded-full ${
-                          isPast || isActive ? "bg-white" : "bg-white/15"
-                        }`}
-                      />
-                    );
-                  })}
-                </div>
-                <h1 className="mt-6 text-3xl font-semibold leading-tight sm:mt-8 sm:text-5xl">
-                  {currentQuestion.prompt}
-                </h1>
-                <p className="mt-4 max-w-lg text-sm leading-7 text-white/70 sm:mt-5 sm:text-base sm:leading-8">
-                  {currentQuestion.note}
-                </p>
-
-                <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
-                  <AnswerButton
-                    label={isSaving ? "Saving..." : "Yes"}
-                    onClick={() => handleChoice("yes")}
-                    disabled={isSaving}
-                  />
-                  <AnswerButton
-                    label="No"
-                    onClick={() => handleChoice("no")}
-                    variant="secondary"
-                    disabled={isSaving}
-                  />
-                </div>
-
-                {statusMessage ? (
-                  <p className="mt-5 text-sm text-rose-200">{statusMessage}</p>
-                ) : null}
+          <div className="w-full max-w-2xl">
+            <div className="mx-auto rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] p-5 shadow-[0_40px_140px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2rem] sm:p-8">
+              <p className="text-center text-xs uppercase tracking-[0.45em] text-rose-200/75">For Her</p>
+              <div className="mt-4 flex flex-wrap justify-center gap-2">
+                {eraBracelet.slice(0, 4).map((era) => (
+                  <span
+                    key={era}
+                    className="rounded-full border border-white/10 bg-black/15 px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-white/72"
+                  >
+                    {era}
+                  </span>
+                ))}
               </div>
-            </div>
+              <div className="mt-6 flex gap-2">
+                {questions.map((question, index) => {
+                  const isActive = index === step;
+                  const isPast = index < step;
 
-            <div className="order-1 lg:order-2">
-              <div className="relative mx-auto aspect-[4/5] max-w-[17rem] overflow-hidden rounded-[1.75rem] border border-white/12 bg-[linear-gradient(160deg,rgba(243,210,118,0.18),rgba(255,170,210,0.22),rgba(73,35,96,0.45),rgba(15,1,9,0.95))] shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:max-w-md sm:rounded-[2rem]">
-                <div className="absolute inset-4 rounded-[1.25rem] border border-dashed border-white/25 sm:inset-6 sm:rounded-[1.5rem]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.24),_transparent_28%)]" />
-                <div className="absolute right-5 top-5 flex flex-wrap gap-1 opacity-55">
-                  {Array.from({ length: 13 }).map((_, index) => (
-                    <span key={`photo-dot-${index}`} className="h-1.5 w-1.5 rounded-full bg-white" />
-                  ))}
-                </div>
-                <div className="absolute inset-x-4 bottom-4 rounded-[1.25rem] border border-white/10 bg-black/25 p-4 backdrop-blur sm:inset-x-10 sm:bottom-10 sm:rounded-[1.5rem] sm:p-6">
-                  <p className="text-xs uppercase tracking-[0.4em] text-rose-200/80">Your Photo</p>
-                  <p className="mt-3 text-xl font-semibold text-white sm:text-2xl">
-                    Drop your favourite picture here later.
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-white/70">
-                    When you are ready, replace this with your real image in the design or turn it into a full-screen background.
-                  </p>
-                </div>
+                  return (
+                    <div
+                      key={question.id}
+                      className={`h-2 flex-1 rounded-full ${
+                        isPast || isActive ? "bg-white" : "bg-white/15"
+                      }`}
+                    />
+                  );
+                })}
               </div>
+              <h1 className="mt-6 text-center text-3xl font-semibold leading-tight sm:mt-8 sm:text-5xl">
+                {currentQuestion.prompt}
+              </h1>
+              <p className="mx-auto mt-4 max-w-lg text-center text-sm leading-7 text-white/70 sm:mt-5 sm:text-base sm:leading-8">
+                {currentQuestion.note}
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
+                <AnswerButton
+                  label={isSaving ? "Saving..." : "Yes"}
+                  onClick={() => handleChoice("yes")}
+                  disabled={isSaving}
+                />
+                <AnswerButton
+                  label="No"
+                  onClick={() => handleChoice("no")}
+                  variant="secondary"
+                  disabled={isSaving}
+                />
+              </div>
+
+              {statusMessage ? (
+                <p className="mt-5 text-center text-sm text-rose-200">{statusMessage}</p>
+              ) : null}
             </div>
           </div>
         </section>
@@ -635,11 +612,11 @@ export default function GiftExperience() {
               </video>
             ) : null}
             <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,3,13,0.68),rgba(18,3,13,0.93))]" />
-            <div className="grid gap-5 p-1 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-              <div>
+            <div className="mx-auto max-w-4xl p-1">
+              <div className="space-y-4">
                 {messageVideoUrl ? (
                   <video
-                    className="w-full rounded-[2rem] border border-white/10 bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)]"
+                    className="w-full rounded-[1.5rem] border border-white/10 bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)] sm:rounded-[2rem]"
                     controls
                     preload="metadata"
                     onEnded={() => setHasVideoEnded(true)}
@@ -662,15 +639,10 @@ export default function GiftExperience() {
                     </button>
                   </div>
                 )}
-              </div>
 
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur sm:rounded-[2rem] sm:p-8">
-                <p className="text-xs uppercase tracking-[0.4em] text-rose-200/75">How It Works</p>
-                <ul className="mt-6 space-y-4 text-sm leading-7 text-white/70">
-                  <li>Use `NEXT_PUBLIC_MESSAGE_VIDEO_URL` for the video where you speak to her.</li>
-                  <li>Use `NEXT_PUBLIC_BACKGROUND_VIDEO_URL` for the looping memory montage behind this page.</li>
-                  <li>The next page unlocks once the main message finishes.</li>
-                </ul>
+                <p className="px-1 text-center text-sm leading-7 text-white/60">
+                  The next page opens once the video finishes.
+                </p>
               </div>
             </div>
             <StageNavigation
