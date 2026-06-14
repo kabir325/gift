@@ -218,7 +218,7 @@ function AnswerButton({
 }) {
   const classes =
     variant === "primary"
-      ? "liquid-pill bg-white/88 text-rose-950 hover:bg-white"
+      ? "liquid-pill border border-white/20 bg-white/14 text-white hover:bg-white/20"
       : "liquid-pill text-white hover:bg-white/15";
 
   return (
@@ -400,7 +400,7 @@ function StageNavigation({
             type="button"
             onClick={onNext}
             disabled={disableNext}
-            className="liquid-pill w-full rounded-full bg-white/88 px-5 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-rose-950 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:py-3"
+            className="liquid-pill w-full rounded-full border border-white/20 bg-white/14 px-5 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/20 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:py-3"
           >
             Next Page
           </button>
@@ -635,13 +635,13 @@ export default function GiftExperience() {
                 )}
               </div>
             </div>
-            <StageNavigation
-              stage="video"
-              onBack={goToPreviousStage}
-              onNext={goToNextStage}
-              disableNext={!hasVideoEnded}
-            />
           </div>
+          <StageNavigation
+            stage="video"
+            onBack={goToPreviousStage}
+            onNext={goToNextStage}
+            disableNext={!hasVideoEnded}
+          />
         </PageShell>
       ) : null}
 
