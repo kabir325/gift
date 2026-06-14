@@ -137,10 +137,19 @@ const letters: Letter[] = [
   },
   {
     id: "l3",
-    title: "What I Hope For",
-    excerpt: "Not pressure. Just a gentle little truth about what I want.",
+    title: "One Note I Needed You To Read",
+    excerpt: "The most delicate thing I wanted to leave with you.",
     body:
-      "I hope for something honest, calm, and real. Something that does not need to be loud to matter. Something where we are kind to each other, curious about each other, and careful with what we are building from the very beginning.",
+      `"I love you
+
+Let me remove the word 'love' between I and You.
+
+How can love follow the word I?
+And how can it come before You?
+
+As when there's love, what else is there except love?
+
+And when there is You, I forget about myself and even about love itself."`,
   },
 ];
 
@@ -375,17 +384,7 @@ function StageNavigation({
   const isLast = currentIndex === revealStages.length - 1;
 
   return (
-    <div className="mt-8 flex flex-col gap-5 border-t border-white/10 pt-5 sm:mt-10 sm:gap-4 sm:pt-6">
-      <div className="flex w-full gap-2">
-        {revealStages.map((item, index) => (
-          <div
-            key={item}
-            className={`h-2 w-12 rounded-full ${
-              index <= currentIndex ? "bg-white" : "bg-white/15"
-            }`}
-          />
-        ))}
-      </div>
+    <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:gap-4">
       <div className="flex w-full flex-col-reverse gap-3 sm:flex-row sm:justify-end">
         {!isFirst ? (
           <button
@@ -591,8 +590,8 @@ export default function GiftExperience() {
       {stage === "video" ? (
         <PageShell
           eyebrow="The Reveal"
-          title="Okay. Then here is everything I wanted to say properly."
-          description="This part stands on its own page. Her answer leads here first, then the next page opens only after the message is done."
+          title="Welcome! U dont know how much it means that you are here."
+          description="If you stayed and said yes all the way here, thank you. What comes next is just me trying to say everything a little more carefully, a little more beautifully, and a lot more honestly."
         >
           <div className="relative isolate overflow-hidden rounded-[2rem]">
             {backgroundVideoUrl ? (
@@ -634,10 +633,6 @@ export default function GiftExperience() {
                     </button>
                   </div>
                 )}
-
-                <p className="px-1 text-center text-sm leading-7 text-white/72">
-                  Stay here with this for a second. The next page opens once the video finishes.
-                </p>
               </div>
             </div>
             <StageNavigation
@@ -656,59 +651,37 @@ export default function GiftExperience() {
           title="The things I wanted you to feel, one page at a time."
           description="Not rushed. Not crowded. Just a few soft little pages for the parts that matter."
         >
-          <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="space-y-3">
-              {slides.map((slide, index) => (
-                <button
-                  key={slide.title}
-                  type="button"
-                  onClick={() => setSelectedSlide(index)}
-                  className={`w-full rounded-[1.5rem] p-5 text-left transition ${
-                    selectedSlide === index
-                      ? "liquid-panel bg-white/88 text-[#23040f]"
-                      : "liquid-panel text-white hover:bg-white/10"
-                  }`}
-                >
-                  <p className="text-xs uppercase tracking-[0.35em] opacity-70">
-                    Slide {index + 1}
-                  </p>
-                  <h2 className="mt-3 text-2xl font-semibold">{slide.title}</h2>
-                </button>
-              ))}
+          <article className="liquid-panel mx-auto max-w-4xl rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-10">
+            <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
+              Slide {selectedSlide + 1} of {slides.length}
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
+              {currentSlide.title}
+            </h2>
+            <p className="mt-5 text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
+              {currentSlide.text}
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button
+                type="button"
+                onClick={() => setSelectedSlide((value) => Math.max(0, value - 1))}
+                disabled={selectedSlide === 0}
+                className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
+              >
+                Previous Slide
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  setSelectedSlide((value) => Math.min(slides.length - 1, value + 1))
+                }
+                disabled={selectedSlide === slides.length - 1}
+                className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
+              >
+                Next Slide
+              </button>
             </div>
-
-            <article className="liquid-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-10">
-              <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
-                Now Playing
-              </p>
-              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
-                {currentSlide.title}
-              </h2>
-              <p className="mt-5 text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
-                {currentSlide.text}
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <button
-                  type="button"
-                  onClick={() => setSelectedSlide((value) => Math.max(0, value - 1))}
-                  disabled={selectedSlide === 0}
-                  className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
-                >
-                  Previous Slide
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setSelectedSlide((value) => Math.min(slides.length - 1, value + 1))
-                  }
-                  disabled={selectedSlide === slides.length - 1}
-                  className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
-                >
-                  Next Slide
-                </button>
-              </div>
-            </article>
-          </div>
+          </article>
           <StageNavigation stage="slides" onBack={goToPreviousStage} onNext={goToNextStage} />
         </PageShell>
       ) : null}
@@ -794,7 +767,7 @@ export default function GiftExperience() {
             <article className="liquid-panel rounded-[1.5rem] bg-[#fff8fb]/88 p-5 text-[#290312] sm:rounded-[2rem] sm:p-10">
               <p className="text-xs uppercase tracking-[0.35em] text-[#7f3658]">Open Letter</p>
               <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">{selectedLetter.title}</h2>
-              <p className="mt-5 text-sm leading-7 text-[#4a1d32] sm:mt-6 sm:text-base sm:leading-8">
+              <p className="mt-5 whitespace-pre-line text-sm leading-7 text-[#4a1d32] sm:mt-6 sm:text-base sm:leading-8">
                 {selectedLetter.body}
               </p>
             </article>
