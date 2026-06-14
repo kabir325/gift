@@ -190,8 +190,8 @@ export default function SongStage() {
   const hasMedia = Boolean(selectedSong.mediaUrl);
 
   return (
-    <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
-      <div className="space-y-3">
+    <div className="grid items-start gap-5 sm:gap-8 lg:grid-cols-[0.34fr_0.66fr] xl:grid-cols-[0.3fr_0.7fr]">
+      <div className="space-y-3 lg:sticky lg:top-6">
         <div className="liquid-panel rounded-[1.5rem] p-5">
           <p className="text-xs uppercase tracking-[0.35em] text-rose-100/70">
             Eras Shelf
@@ -237,10 +237,10 @@ export default function SongStage() {
       <section
         className={`liquid-panel overflow-hidden rounded-[1.75rem] bg-gradient-to-br ${selectedSong.accent} p-5 sm:p-6`}
       >
-        <div className="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
+        <div className="grid gap-5 xl:grid-cols-[1.1fr_0.9fr] 2xl:grid-cols-[1.04fr_0.96fr]">
           <div className="liquid-panel rounded-[1.5rem] bg-black/20 p-5">
-            <div className="flex items-start gap-4">
-              <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25">
+            <div className="flex items-start gap-4 xl:gap-5">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25 xl:h-24 xl:w-24">
                 {selectedSong.coverUrl ? (
                   <img
                     src={selectedSong.coverUrl}
@@ -248,7 +248,7 @@ export default function SongStage() {
                     className="h-full w-full object-cover"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center text-center text-[10px] uppercase tracking-[0.35em] text-white/55">
+                  <div className="flex h-full w-full items-center justify-center text-center text-[10px] uppercase tracking-[0.35em] text-white/68">
                     Cover
                   </div>
                 )}
@@ -258,9 +258,13 @@ export default function SongStage() {
                 <p className="text-xs uppercase tracking-[0.4em] text-rose-100/70">
                   From You / {selectedSong.era}
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold text-white">{selectedSong.title}</h2>
-                <p className="mt-2 text-sm text-white/70">{selectedSong.artist}</p>
-                <p className="mt-3 text-sm leading-7 text-white/70">{selectedSong.note}</p>
+                <h2 className="mt-2 text-2xl font-semibold text-white xl:text-3xl">
+                  {selectedSong.title}
+                </h2>
+                <p className="mt-2 text-sm text-white/78 xl:text-base">{selectedSong.artist}</p>
+                <p className="mt-3 text-sm leading-7 text-white/76 xl:max-w-xl">
+                  {selectedSong.note}
+                </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {selectedSong.bracelet.map((bead) => (
                     <span
@@ -280,7 +284,7 @@ export default function SongStage() {
                   ref={(element) => {
                     mediaRef.current = element;
                   }}
-                  className="aspect-video w-full rounded-[1.5rem] border border-white/10 bg-black object-cover"
+                  className="aspect-video w-full rounded-[1.5rem] border border-white/10 bg-black object-cover shadow-[0_18px_50px_rgba(0,0,0,0.3)]"
                   playsInline
                   preload="metadata"
                   onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
@@ -306,12 +310,12 @@ export default function SongStage() {
                   >
                     {hasMedia ? <source src={selectedSong.mediaUrl} /> : null}
                   </audio>
-                  <div className="flex min-h-56 items-center justify-center rounded-[1.25rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),transparent_36%)] text-center">
+                  <div className="flex min-h-56 items-center justify-center rounded-[1.25rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),transparent_36%)] text-center xl:min-h-[20rem]">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.4em] text-rose-100/65">
+                      <p className="text-xs uppercase tracking-[0.4em] text-rose-100/75">
                         Spotify Style
                       </p>
-                      <p className="mt-4 text-2xl font-semibold text-white">
+                      <p className="mt-4 text-2xl font-semibold text-white xl:text-3xl">
                         {hasMedia ? "Audio performance ready here." : "Add your audio or video URL here later."}
                       </p>
                     </div>
@@ -326,7 +330,7 @@ export default function SongStage() {
                   type="button"
                   onClick={() => void togglePlayback()}
                   disabled={!hasMedia}
-                  className="liquid-pill flex h-14 w-14 items-center justify-center rounded-full bg-white/88 text-sm font-semibold text-[#23040f] transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-45"
+                  className="liquid-pill flex h-14 w-14 items-center justify-center rounded-full bg-white/88 text-sm font-semibold text-[#23040f] transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-45 xl:h-16 xl:w-16"
                 >
                   {isPlaying ? "Pause" : "Play"}
                 </button>
@@ -341,7 +345,7 @@ export default function SongStage() {
                     className="w-full accent-white"
                     disabled={!hasMedia}
                   />
-                  <div className="mt-2 flex items-center justify-between text-xs text-white/60">
+                  <div className="mt-2 flex items-center justify-between text-xs text-white/72">
                     <span>{formatTime(currentTime)}</span>
                     <span>{formatTime(duration)}</span>
                   </div>
@@ -349,7 +353,7 @@ export default function SongStage() {
               </div>
 
               {!hasMedia ? (
-                <p className="text-sm leading-7 text-rose-100/70">
+                <p className="text-sm leading-7 text-rose-100/78">
                   Set the song URL in your environment or replace it with a direct hosted media URL once your recording is ready.
                 </p>
               ) : null}
@@ -358,7 +362,7 @@ export default function SongStage() {
 
           <div className="liquid-panel rounded-[1.5rem] bg-black/20 p-5">
             <p className="text-xs uppercase tracking-[0.4em] text-rose-100/70">Live Lyrics</p>
-            <div className="mt-5 max-h-[28rem] space-y-4 overflow-y-auto pr-2">
+            <div className="mt-5 max-h-[28rem] space-y-4 overflow-y-auto pr-2 xl:max-h-[36rem]">
               {selectedSong.lyrics.map((line, index) => {
                 const isActive = index === activeLyricIndex;
 
@@ -371,7 +375,7 @@ export default function SongStage() {
                     className={`rounded-[1.25rem] px-4 py-3 text-base leading-8 transition sm:text-lg ${
                       isActive
                         ? "liquid-pill bg-white/88 text-[#23040f] shadow-[0_10px_30px_rgba(255,255,255,0.12)]"
-                        : "text-white/55"
+                        : "text-white/70"
                     }`}
                   >
                     {line.text}
@@ -392,14 +396,14 @@ export default function SongStage() {
                 key={clue}
                 className="liquid-panel rounded-[1.25rem] p-4"
               >
-                <p className="text-[11px] uppercase tracking-[0.3em] text-white/55">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-white/65">
                   clue 0{index + 1}
                 </p>
-                <p className="mt-2 text-sm leading-7 text-white/72">{clue}</p>
+                <p className="mt-2 text-sm leading-7 text-white/80">{clue}</p>
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-6 text-white/55">
+          <p className="mt-4 text-xs leading-6 text-white/68">
             Replace these with tiny references only she would catch, and this page will feel a
             lot more like it was made specifically for her.
           </p>

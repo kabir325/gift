@@ -240,18 +240,12 @@ function PageShell({
       <div className="liquid-panel relative w-full max-w-6xl overflow-hidden rounded-[2rem] p-5 sm:rounded-[2.5rem] sm:p-10">
         <div className="liquid-orb right-[-3rem] top-[-2rem] h-24 w-24 bg-white/20" />
         <div className="liquid-orb bottom-[-2rem] left-[-2rem] h-28 w-28 bg-rose-200/20" />
-        <div className="pointer-events-none absolute right-5 top-5 flex gap-1 opacity-35">
-          {Array.from({ length: 13 }).map((_, index) => (
-            <span
-              key={`thirteen-${index}`}
-              className="h-1.5 w-1.5 rounded-full bg-white"
-            />
-          ))}
-        </div>
         <div className="max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.45em] text-rose-200/75">{eyebrow}</p>
+          <p className="text-xs uppercase tracking-[0.28em] text-rose-200/75 sm:tracking-[0.38em]">
+            {eyebrow}
+          </p>
           <h1 className="mt-4 text-3xl font-semibold leading-tight sm:text-5xl">{title}</h1>
-          <p className="mt-4 text-sm leading-7 text-white/70 sm:mt-5 sm:text-base sm:leading-8">
+          <p className="mt-4 text-sm leading-7 text-white/78 sm:mt-5 sm:text-base sm:leading-8">
             {description}
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -282,7 +276,7 @@ function PlaceholderVideo({
     <div className="liquid-panel flex min-h-72 w-full flex-col items-center justify-center rounded-[1.5rem] p-6 text-center sm:min-h-80 sm:rounded-[2rem] sm:p-8">
       <p className="text-xs uppercase tracking-[0.4em] text-rose-200/70">Video Slot</p>
       <h3 className="mt-4 text-xl font-semibold text-white sm:text-2xl">{title}</h3>
-      <p className="mt-3 max-w-xl text-sm leading-7 text-white/70">{description}</p>
+      <p className="mt-3 max-w-xl text-sm leading-7 text-white/78">{description}</p>
     </div>
   );
 }
@@ -318,7 +312,7 @@ function PinGate({
         <h1 className="mt-4 text-center text-3xl font-semibold text-white sm:text-5xl">
           Enter the PIN
         </h1>
-        <p className="mt-4 text-center text-sm leading-7 text-white/70 sm:mt-5 sm:text-base sm:leading-8">
+        <p className="mt-4 text-center text-sm leading-7 text-white/78 sm:mt-5 sm:text-base sm:leading-8">
           This page opens only with the right code.
         </p>
 
@@ -357,7 +351,7 @@ function GoodbyeCard({
       <div className="liquid-panel w-full max-w-2xl rounded-[1.75rem] p-6 text-center sm:rounded-[2rem] sm:p-10">
         <p className="text-xs uppercase tracking-[0.45em] text-rose-200/70">A Little Note</p>
         <h1 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">{title}</h1>
-        <p className="mt-5 text-sm leading-7 text-white/70 sm:mt-6 sm:text-base sm:leading-8">
+        <p className="mt-5 text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
           {copy}
         </p>
       </div>
@@ -568,7 +562,7 @@ export default function GiftExperience() {
               <h1 className="mt-6 text-center text-3xl font-semibold leading-tight sm:mt-8 sm:text-5xl">
                 {currentQuestion.prompt}
               </h1>
-              <p className="mx-auto mt-4 max-w-lg text-center text-sm leading-7 text-white/70 sm:mt-5 sm:text-base sm:leading-8">
+              <p className="mx-auto mt-4 max-w-lg text-center text-sm leading-7 text-white/78 sm:mt-5 sm:text-base sm:leading-8">
                 {currentQuestion.note}
               </p>
 
@@ -641,7 +635,7 @@ export default function GiftExperience() {
                   </div>
                 )}
 
-                <p className="px-1 text-center text-sm leading-7 text-white/60">
+                <p className="px-1 text-center text-sm leading-7 text-white/72">
                   Stay here with this for a second. The next page opens once the video finishes.
                 </p>
               </div>
@@ -690,7 +684,7 @@ export default function GiftExperience() {
               <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
                 {currentSlide.title}
               </h2>
-              <p className="mt-5 text-sm leading-7 text-white/70 sm:mt-6 sm:text-base sm:leading-8">
+              <p className="mt-5 text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
                 {currentSlide.text}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -755,12 +749,12 @@ export default function GiftExperience() {
                 <h2 className="mt-3 text-2xl font-semibold text-white">
                   {selectedMoment.title}
                 </h2>
-                <p className="mt-4 text-sm leading-7 text-white/70">{selectedMoment.detail}</p>
+                <p className="mt-4 text-sm leading-7 text-white/78">{selectedMoment.detail}</p>
               </article>
             </div>
 
             <div className="liquid-panel flex items-center rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-8">
-              <p className="text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
+              <p className="text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
                 If you want this page to really land, replace each of these with one real memory:
                 a moment, a place, a sentence she said, or a version of her laugh you still
                 remember.
@@ -828,7 +822,7 @@ export default function GiftExperience() {
         >
           <div className="space-y-5">
             <div className="liquid-panel mx-auto max-w-5xl rounded-[1.75rem] p-6 text-center sm:rounded-[2.5rem] sm:p-14">
-              <p className="mx-auto max-w-3xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
+              <p className="mx-auto max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
                 I do not know what part of this you will keep with you, but I hope it is the
                 gentleness. I hope it is the care. I hope it is the feeling of being seen by
                 someone who thinks you are very, very easy to care about.
@@ -841,10 +835,10 @@ export default function GiftExperience() {
                   key={note}
                   className="liquid-panel rounded-[1.4rem] p-4"
                 >
-                  <p className="text-[11px] uppercase tracking-[0.3em] text-white/55">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-white/65">
                     secret note 0{index + 1}
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-white/72">{note}</p>
+                  <p className="mt-3 text-sm leading-7 text-white/80">{note}</p>
                 </div>
               ))}
             </div>
