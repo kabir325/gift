@@ -1,0 +1,122 @@
+[
+  {
+    "id": "829a703f-4eca-4c25-9c5e-8f60f650ed25",
+    "questionId": "sure",
+    "answer": "yes",
+    "sessionId": "3f96af78-af91-4957-abc8-1f2c5cc1d16c",
+    "createdAt": "2026-06-14T06:22:49.234Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "704163b8-f6bb-46b0-b2d1-f41c3d4d06c5",
+    "questionId": "week",
+    "answer": "yes",
+    "sessionId": "3f96af78-af91-4957-abc8-1f2c5cc1d16c",
+    "createdAt": "2026-06-14T06:22:48.165Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "5a6aabe5-c261-4077-b681-37632c173091",
+    "questionId": "talk",
+    "answer": "yes",
+    "sessionId": "3f96af78-af91-4957-abc8-1f2c5cc1d16c",
+    "createdAt": "2026-06-14T06:22:47.773Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "09b8f3e1-55c5-48f4-a6a0-8a7b2f21a7d1",
+    "questionId": "sure",
+    "answer": "yes",
+    "sessionId": "bc70a4e3-775b-4f1d-8e33-a2e9146f2b67",
+    "createdAt": "2026-06-13T18:55:47.471Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "07c22022-a6b5-4604-a94e-977bd2d8d998",
+    "questionId": "week",
+    "answer": "yes",
+    "sessionId": "bc70a4e3-775b-4f1d-8e33-a2e9146f2b67",
+    "createdAt": "2026-06-13T18:55:46.136Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "60d4249a-f70c-43b6-b850-6b309fe72448",
+    "questionId": "talk",
+    "answer": "yes",
+    "sessionId": "bc70a4e3-775b-4f1d-8e33-a2e9146f2b67",
+    "createdAt": "2026-06-13T18:55:45.822Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "b34d1d45-81d6-470d-a01c-1f80b5866667",
+    "questionId": "sure",
+    "answer": "no",
+    "sessionId": "30515882-0e9a-4aa6-b9ef-43e6c7b4ffff",
+    "createdAt": "2026-06-13T18:43:52.744Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "4ef671f2-f3c5-408c-9790-cc949030a0e5",
+    "questionId": "week",
+    "answer": "yes",
+    "sessionId": "30515882-0e9a-4aa6-b9ef-43e6c7b4ffff",
+    "createdAt": "2026-06-13T18:43:51.915Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "e55372e8-5dff-496d-b71f-8236bb77ec57",
+    "questionId": "talk",
+    "answer": "yes",
+    "sessionId": "30515882-0e9a-4aa6-b9ef-43e6c7b4ffff",
+    "createdAt": "2026-06-13T18:43:50.943Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "3df3feb6-6c6b-47c8-9d92-087c792eab02",
+    "questionId": "week",
+    "answer": "no",
+    "sessionId": "1584166b-b06d-4199-9765-baa6b6135bb1",
+    "createdAt": "2026-06-13T18:43:44.764Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "3482900e-60b1-4f59-89a6-992ae1707e1d",
+    "questionId": "talk",
+    "answer": "yes",
+    "sessionId": "1584166b-b06d-4199-9765-baa6b6135bb1",
+    "createdAt": "2026-06-13T18:43:43.753Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "c2d3ae3b-0d7b-4763-8f03-35ab8ad2d07d",
+    "questionId": "talk",
+    "answer": "no",
+    "sessionId": "2d761bfe-54d5-4dc7-9f6e-55cdc562927f",
+    "createdAt": "2026-06-13T18:43:34.628Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36"
+  },
+  {
+    "id": "5e030328-4426-40eb-ba5b-25e379e8a504",
+    "questionId": "sure",
+    "answer": "yes",
+    "sessionId": "aabb02f0-4049-4856-831a-c0e12d8a2d81",
+    "createdAt": "2026-06-13T18:42:43.088Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "57b2f8a7-0d26-4ae8-b0f1-aa6325c08201",
+    "questionId": "week",
+    "answer": "yes",
+    "sessionId": "aabb02f0-4049-4856-831a-c0e12d8a2d81",
+    "createdAt": "2026-06-13T18:42:41.334Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "3564a5cd-e8a8-4859-a1c4-97aad134d4c5",
+    "questionId": "talk",
+    "answer": "yes",
+    "sessionId": "aabb02f0-4049-4856-831a-c0e12d8a2d81",
+    "createdAt": "2026-06-13T18:42:33.010Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+  }
+]
