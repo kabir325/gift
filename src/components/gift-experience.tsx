@@ -46,46 +46,46 @@ const eraBracelet = [
 ];
 
 const hiddenNotes = [
-  "look for the number she would smile at first",
-  "hide one line about her favorite little habit",
-  "mention the place that always reminds you of her",
-  "leave one detail only the two of you would catch",
+  "you somehow make softness look effortless",
+  "there are songs I cannot hear normally anymore because of you",
+  "you are in so many of my favorite little thoughts",
+  "if this feels like a clue, it probably is meant for you",
 ];
 
 const questions: Question[] = [
   {
     id: "talk",
     prompt: "Did you have the talk you were to have?",
-    note: "Take your time. This page waits for you.",
+    note: "Take your time. Nothing here is going anywhere.",
   },
   {
     id: "week",
     prompt: "Are you okay with the one week thing?",
-    note: "No pressure, only honesty.",
+    note: "No pressure. I just want the most honest answer from you.",
   },
   {
     id: "sure",
     prompt: "Are you really sure?",
-    note: "This is me making sure your yes is a real yes.",
+    note: "This is just me pausing for a second and asking with my whole heart.",
   },
 ];
 
 const slides = [
   {
     title: "A Soft Start",
-    text: "This whole little corner of the internet is here because you matter to me in a way that is calm, deep, and impossible to explain in one sentence.",
+    text: "I wanted to make you something that felt slower than a message and softer than a speech. Something you could hold for a moment and feel, not just read.",
   },
   {
-    title: "What I Hope You Feel",
-    text: "I hope this feels thoughtful, safe, and warm. Something you can open slowly and sit with when you want to hear me out.",
+    title: "What I Hope Reaches You",
+    text: "I hope this feels gentle. I hope it feels sincere. More than anything, I hope it feels like being looked at with care by someone who really means it.",
   },
   {
     title: "Why I Made This",
-    text: "I wanted more than a text and more than one conversation. I wanted something that could hold memories, honesty, and the version of us that still makes me smile.",
+    text: "I did not want to say any of this in a rushed way. I wanted a place for the tenderness, the honesty, and all the little things about you that stay with me longer than they should.",
   },
   {
     title: "Whatever Happens",
-    text: "My favourite part has always been you. Everything else here is just me trying to say that beautifully.",
+    text: "Whatever this becomes, I wanted there to be one place where you could clearly see this: you have been deeply, quietly, and beautifully important to me.",
   },
 ];
 
@@ -93,54 +93,54 @@ const timelineMoments: TimelineMoment[] = [
   {
     id: "m1",
     label: "01",
-    title: "The Beginning",
+    title: "The First Ease",
     detail:
-      "Use this space for the first moment that felt special. A first conversation, first joke, first instant of comfort, or the first time she really stuck in your head.",
+      "There was a point where talking to you stopped feeling ordinary and started feeling like relief. That is the moment I always come back to first.",
   },
   {
     id: "m2",
     label: "02",
-    title: "The Turning Point",
+    title: "The Shift",
     detail:
-      "Add the memory where things started to feel real. Something small, but unforgettable. The kind of moment that became important after the fact.",
+      "Somewhere along the way, without any warning, you became part of the way I thought about my days. It happened quietly. It mattered a lot.",
   },
   {
     id: "m3",
     label: "03",
-    title: "The Favourite Memory",
+    title: "My Favorite Version Of Us",
     detail:
-      "Make this one vivid. A place, a look, a laugh, a late-night talk, or a simple day that somehow became one of your favourites together.",
+      "It might be one look, one laugh, one drive, one conversation, or one completely ordinary moment that still glows in my head for no reason except that it had you in it.",
   },
   {
     id: "m4",
     label: "04",
-    title: "This Chapter",
+    title: "Right Here",
     detail:
-      "This node can hold what this week means to you. Honest, gentle, and hopeful. A reminder that this page is part of a bigger story, not the whole thing.",
+      "This part is not about forcing an ending or a promise. It is just me meeting this moment honestly and hoping you can feel how carefully I am trying to hold it.",
   },
 ];
 
 const letters: Letter[] = [
   {
     id: "l1",
-    title: "If You Open This First",
-    excerpt: "A simple letter that feels like taking a deep breath.",
+    title: "If You Read This Slowly",
+    excerpt: "The soft beginning. The part where I just tell the truth.",
     body:
-      "I made this because I wanted to say things with care. Not rushed, not half-typed, not lost in a moment. Just clearly, gently, and in a way you could come back to whenever you wanted.",
+      "I made this because I wanted to give my feelings somewhere gentler to live. Not in a rushed paragraph. Not in a nervous conversation. Just here, with enough room for me to tell you that you matter to me in a way that has been growing quietly and very sincerely.",
   },
   {
     id: "l2",
-    title: "What I Appreciate About You",
-    excerpt: "A place for the traits, habits, and tiny things you adore.",
+    title: "What Stays With Me About You",
+    excerpt: "The details that sound small until you realize they are not.",
     body:
-      "This section is perfect for the details you notice: the way she reassures people, the way she laughs, the way she thinks, the way she carries herself, and the tiny things that make her unmistakably her.",
+      "It is the small things for me. The way you carry yourself. The way your presence changes the feeling of a room. The way some people are easy to admire, but somehow you are also easy to miss after. There is something about you that lingers.",
   },
   {
     id: "l3",
     title: "What I Hope For",
-    excerpt: "Future-facing, soft, and sincere.",
+    excerpt: "Not pressure. Just a gentle little truth about what I want.",
     body:
-      "Write about what you hope to build, what you want to learn together, and what kind of gentleness you want to protect between you both. Keep it honest and calm.",
+      "I hope for something honest, calm, and real. Something that does not need to be loud to matter. Something where we are kind to each other, curious about each other, and careful with what we are building from the very beginning.",
   },
 ];
 
@@ -148,12 +148,12 @@ const goodbyeMessages = {
   talk: {
     title: "Come back once you've had that talk.",
     copy:
-      "This page will still be here. No rush, no guilt, no pressure. Just come back when the conversation has happened and your heart feels ready.",
+      "This will still be here when the time is right. No guilt, no pressure, no hard feelings. Just come back when that conversation has happened and your heart feels settled enough to return.",
   },
   mind: {
     title: "If you ever change your mind, come back to this page.",
     copy:
-      "Take care of yourself, be gentle with your heart, and know that this was made with love. Goodbye for now.",
+      "Take care of yourself, be gentle with your heart, and know this was made with a lot of sincerity. Goodbye for now, and thank you for getting this far.",
   },
 };
 
@@ -209,15 +209,15 @@ function AnswerButton({
 }) {
   const classes =
     variant === "primary"
-      ? "bg-white text-rose-950 hover:bg-rose-50"
-      : "border border-white/30 bg-white/10 text-white hover:bg-white/15";
+      ? "liquid-pill bg-white/88 text-rose-950 hover:bg-white"
+      : "liquid-pill text-white hover:bg-white/15";
 
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`w-full rounded-full px-6 py-4 text-sm font-semibold tracking-[0.18em] uppercase transition disabled:cursor-not-allowed disabled:opacity-60 sm:min-w-32 sm:w-auto sm:py-3 ${classes}`}
+      className={`w-full rounded-full px-6 py-4 text-sm font-semibold tracking-[0.18em] uppercase transition duration-300 disabled:cursor-not-allowed disabled:opacity-60 sm:min-w-32 sm:w-auto sm:py-3 ${classes}`}
     >
       {label}
     </button>
@@ -237,8 +237,9 @@ function PageShell({
 }) {
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center px-4 py-6 sm:px-6 sm:py-10">
-      <div className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_40px_140px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2.5rem] sm:p-10">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(255,182,214,0.16),transparent)]" />
+      <div className="liquid-panel relative w-full max-w-6xl overflow-hidden rounded-[2rem] p-5 sm:rounded-[2.5rem] sm:p-10">
+        <div className="liquid-orb right-[-3rem] top-[-2rem] h-24 w-24 bg-white/20" />
+        <div className="liquid-orb bottom-[-2rem] left-[-2rem] h-28 w-28 bg-rose-200/20" />
         <div className="pointer-events-none absolute right-5 top-5 flex gap-1 opacity-35">
           {Array.from({ length: 13 }).map((_, index) => (
             <span
@@ -257,7 +258,7 @@ function PageShell({
             {eraBracelet.map((era) => (
               <span
                 key={era}
-                className="rounded-full border border-white/12 bg-black/15 px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/75"
+                className="liquid-pill rounded-full px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/75"
               >
                 {era}
               </span>
@@ -278,7 +279,7 @@ function PlaceholderVideo({
   description: string;
 }) {
   return (
-    <div className="flex min-h-72 w-full flex-col items-center justify-center rounded-[1.5rem] border border-white/10 bg-black/30 p-6 text-center shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur sm:min-h-80 sm:rounded-[2rem] sm:p-8">
+    <div className="liquid-panel flex min-h-72 w-full flex-col items-center justify-center rounded-[1.5rem] p-6 text-center sm:min-h-80 sm:rounded-[2rem] sm:p-8">
       <p className="text-xs uppercase tracking-[0.4em] text-rose-200/70">Video Slot</p>
       <h3 className="mt-4 text-xl font-semibold text-white sm:text-2xl">{title}</h3>
       <p className="mt-3 max-w-xl text-sm leading-7 text-white/70">{description}</p>
@@ -310,7 +311,7 @@ function PinGate({
 
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center px-4 py-6 sm:px-6 sm:py-16">
-      <div className="w-full max-w-md rounded-[1.75rem] border border-white/10 bg-[#160812]/90 p-6 shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2rem] sm:p-10">
+      <div className="liquid-panel w-full max-w-md rounded-[1.75rem] p-6 sm:rounded-[2rem] sm:p-10">
         <p className="text-center text-xs uppercase tracking-[0.45em] text-rose-200/70">
           Private Entry
         </p>
@@ -328,11 +329,11 @@ function PinGate({
             value={value}
             onChange={(event) => setValue(event.target.value)}
             placeholder="PIN"
-            className="w-full rounded-full border border-white/15 bg-[#1b0a15] px-5 py-4 text-center text-base tracking-[0.35em] text-white outline-none placeholder:tracking-[0.25em] placeholder:text-white/35 sm:text-lg sm:tracking-[0.4em]"
+            className="liquid-pill w-full rounded-full px-5 py-4 text-center text-base tracking-[0.35em] text-white outline-none placeholder:tracking-[0.25em] placeholder:text-white/35 sm:text-lg sm:tracking-[0.4em]"
           />
           <button
             type="submit"
-            className="w-full rounded-full bg-white px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-rose-950 transition hover:bg-rose-50"
+            className="liquid-pill w-full rounded-full bg-white/88 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-rose-950 transition hover:bg-white"
           >
             Open
           </button>
@@ -353,7 +354,7 @@ function GoodbyeCard({
 }) {
   return (
     <section className="flex min-h-[100svh] items-center justify-center px-4 py-6 sm:px-6 sm:py-16">
-      <div className="w-full max-w-2xl rounded-[1.75rem] border border-white/15 bg-[#160812]/90 p-6 text-center shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2rem] sm:p-10">
+      <div className="liquid-panel w-full max-w-2xl rounded-[1.75rem] p-6 text-center sm:rounded-[2rem] sm:p-10">
         <p className="text-xs uppercase tracking-[0.45em] text-rose-200/70">A Little Note</p>
         <h1 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">{title}</h1>
         <p className="mt-5 text-sm leading-7 text-white/70 sm:mt-6 sm:text-base sm:leading-8">
@@ -396,7 +397,7 @@ function StageNavigation({
           <button
             type="button"
             onClick={onBack}
-            className="w-full rounded-full border border-white/20 px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 sm:w-auto sm:py-3"
+            className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/12 sm:w-auto sm:py-3"
           >
             Back
           </button>
@@ -406,7 +407,7 @@ function StageNavigation({
             type="button"
             onClick={onNext}
             disabled={disableNext}
-            className="w-full rounded-full bg-white px-5 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-rose-950 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:py-3"
+            className="liquid-pill w-full rounded-full bg-white/88 px-5 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-rose-950 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:py-3"
           >
             Next Page
           </button>
@@ -537,13 +538,13 @@ export default function GiftExperience() {
       {stage === "questions" && currentQuestion ? (
         <section className="relative flex min-h-[100svh] items-center justify-center px-4 py-6 sm:px-6 sm:py-16">
           <div className="w-full max-w-2xl">
-            <div className="mx-auto rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] p-5 shadow-[0_40px_140px_rgba(0,0,0,0.45)] backdrop-blur sm:rounded-[2rem] sm:p-8">
+            <div className="liquid-panel mx-auto rounded-[1.75rem] p-5 sm:rounded-[2rem] sm:p-8">
               <p className="text-center text-xs uppercase tracking-[0.45em] text-rose-200/75">For Her</p>
               <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {eraBracelet.slice(0, 4).map((era) => (
                   <span
                     key={era}
-                    className="rounded-full border border-white/10 bg-black/15 px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-white/72"
+                    className="liquid-pill rounded-full px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-white/72"
                   >
                     {era}
                   </span>
@@ -641,7 +642,7 @@ export default function GiftExperience() {
                 )}
 
                 <p className="px-1 text-center text-sm leading-7 text-white/60">
-                  The next page opens once the video finishes.
+                  Stay here with this for a second. The next page opens once the video finishes.
                 </p>
               </div>
             </div>
@@ -658,8 +659,8 @@ export default function GiftExperience() {
       {stage === "slides" ? (
         <PageShell
           eyebrow="Slides"
-          title="A quieter little set of pages inside the page."
-          description="Instead of one long scroll, this becomes the next stop after the video. You can turn these into the exact thoughts you want her to read."
+          title="The things I wanted you to feel, one page at a time."
+          description="Not rushed. Not crowded. Just a few soft little pages for the parts that matter."
         >
           <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.85fr_1.15fr]">
             <div className="space-y-3">
@@ -668,10 +669,10 @@ export default function GiftExperience() {
                   key={slide.title}
                   type="button"
                   onClick={() => setSelectedSlide(index)}
-                  className={`w-full rounded-[1.5rem] border p-5 text-left transition ${
+                  className={`w-full rounded-[1.5rem] p-5 text-left transition ${
                     selectedSlide === index
-                      ? "border-white bg-white text-[#23040f]"
-                      : "border-white/12 bg-white/5 text-white hover:bg-white/10"
+                      ? "liquid-panel bg-white/88 text-[#23040f]"
+                      : "liquid-panel text-white hover:bg-white/10"
                   }`}
                 >
                   <p className="text-xs uppercase tracking-[0.35em] opacity-70">
@@ -682,9 +683,9 @@ export default function GiftExperience() {
               ))}
             </div>
 
-            <article className="rounded-[1.5rem] border border-white/10 bg-[#1e0a16] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.22)] sm:rounded-[2rem] sm:p-10">
+            <article className="liquid-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-10">
               <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
-                Current Slide
+                Now Playing
               </p>
               <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
                 {currentSlide.title}
@@ -697,7 +698,7 @@ export default function GiftExperience() {
                   type="button"
                   onClick={() => setSelectedSlide((value) => Math.max(0, value - 1))}
                   disabled={selectedSlide === 0}
-                  className="w-full rounded-full border border-white/20 px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
+                  className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
                 >
                   Previous Slide
                 </button>
@@ -707,7 +708,7 @@ export default function GiftExperience() {
                     setSelectedSlide((value) => Math.min(slides.length - 1, value + 1))
                   }
                   disabled={selectedSlide === slides.length - 1}
-                  className="w-full rounded-full border border-white/20 px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
+                  className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
                 >
                   Next Slide
                 </button>
@@ -721,21 +722,21 @@ export default function GiftExperience() {
       {stage === "timeline" ? (
         <PageShell
           eyebrow="Timeline"
-          title="A tiny map of your story."
-          description="This now lives on its own page too, so each part of the experience feels intentional instead of all arriving at once."
+          title="The quiet little timeline in my head."
+          description="Not every important thing is dramatic. Sometimes it is just a few small moments that refuse to leave."
         >
           <div className="grid gap-5 sm:gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur sm:rounded-[2rem] sm:p-8">
+            <div className="liquid-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-8">
               <div className="relative flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
                 {timelineMoments.map((moment, index) => (
                   <div key={moment.id} className="flex items-center gap-3 sm:gap-4">
                     <button
                       type="button"
                       onClick={() => setSelectedMomentId(moment.id)}
-                      className={`flex h-14 w-14 items-center justify-center rounded-full border text-sm font-semibold transition ${
+                      className={`flex h-14 w-14 items-center justify-center rounded-full text-sm font-semibold transition ${
                         selectedMomentId === moment.id
-                          ? "border-white bg-white text-[#290312]"
-                          : "border-white/20 bg-white/5 text-white hover:bg-white/12"
+                          ? "liquid-pill bg-white/88 text-[#290312]"
+                          : "liquid-pill text-white hover:bg-white/12"
                       }`}
                     >
                       {moment.label}
@@ -747,7 +748,7 @@ export default function GiftExperience() {
                 ))}
               </div>
 
-              <article className="mt-6 rounded-[1.25rem] border border-white/10 bg-[#180813] p-5 sm:mt-8 sm:rounded-[1.5rem] sm:p-6">
+              <article className="liquid-panel mt-6 rounded-[1.25rem] p-5 sm:mt-8 sm:rounded-[1.5rem] sm:p-6">
                 <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
                   Selected Moment
                 </p>
@@ -758,10 +759,11 @@ export default function GiftExperience() {
               </article>
             </div>
 
-            <div className="flex items-center rounded-[1.5rem] border border-white/10 bg-[#1b0914] p-5 sm:rounded-[2rem] sm:p-8">
+            <div className="liquid-panel flex items-center rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-8">
               <p className="text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-                Replace these four nodes with real memories and this page becomes one of the
-                sweetest parts of the whole experience.
+                If you want this page to really land, replace each of these with one real memory:
+                a moment, a place, a sentence she said, or a version of her laugh you still
+                remember.
               </p>
             </div>
           </div>
@@ -772,8 +774,8 @@ export default function GiftExperience() {
       {stage === "letters" ? (
         <PageShell
           eyebrow="Letters"
-          title="A portfolio of little notes from you."
-          description="Each letter now gets breathing room on its own screen in the journey, while still letting her switch between notes inside this page."
+          title="The letters I would rather hand to you slowly."
+          description="This is the softer part. The part that sounds most like me when I stop trying to be clever."
         >
           <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="grid gap-4">
@@ -782,10 +784,10 @@ export default function GiftExperience() {
                   key={letter.id}
                   type="button"
                   onClick={() => setSelectedLetterId(letter.id)}
-                  className={`rounded-[1.5rem] border p-6 text-left transition ${
+                  className={`rounded-[1.5rem] p-6 text-left transition ${
                     selectedLetterId === letter.id
-                      ? "border-white bg-white text-[#23040f]"
-                      : "border-white/12 bg-white/5 text-white hover:bg-white/10"
+                      ? "liquid-panel bg-white/88 text-[#23040f]"
+                      : "liquid-panel text-white hover:bg-white/10"
                   }`}
                 >
                   <p className="text-xs uppercase tracking-[0.35em] opacity-70">Letter</p>
@@ -795,7 +797,7 @@ export default function GiftExperience() {
               ))}
             </div>
 
-            <article className="rounded-[1.5rem] border border-white/12 bg-[#fff8fb] p-5 text-[#290312] shadow-[0_18px_60px_rgba(0,0,0,0.22)] sm:rounded-[2rem] sm:p-10">
+            <article className="liquid-panel rounded-[1.5rem] bg-[#fff8fb]/88 p-5 text-[#290312] sm:rounded-[2rem] sm:p-10">
               <p className="text-xs uppercase tracking-[0.35em] text-[#7f3658]">Open Letter</p>
               <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">{selectedLetter.title}</h2>
               <p className="mt-5 text-sm leading-7 text-[#4a1d32] sm:mt-6 sm:text-base sm:leading-8">
@@ -810,8 +812,8 @@ export default function GiftExperience() {
       {stage === "songs" ? (
         <PageShell
           eyebrow="Songs"
-          title="A little music page made just for her."
-          description="This is where your sung songs can live, with a Spotify-style player feel and lyrics that light up while you sing."
+          title="The songs I would choose if I had to say it in music."
+          description="A little more theatrical, a little more vulnerable, and probably the page she will replay if she is smiling."
         >
           <SongStage />
           <StageNavigation stage="songs" onBack={goToPreviousStage} onNext={goToNextStage} />
@@ -821,15 +823,15 @@ export default function GiftExperience() {
       {stage === "final" ? (
         <PageShell
           eyebrow="Last Page"
-          title="Add one final note here that feels like the quiet end of a good letter."
-          description="This is the closing page now, not the bottom of a long scroll. It can hold your softest final sentence."
+          title="If you remember one thing from all of this, let it be this."
+          description="You have been worth the effort, the thought, and every careful word I wanted to get right."
         >
           <div className="space-y-5">
-            <div className="mx-auto max-w-5xl rounded-[1.75rem] border border-white/12 bg-[linear-gradient(135deg,rgba(255,245,248,0.12),rgba(255,255,255,0.04))] p-6 text-center backdrop-blur sm:rounded-[2.5rem] sm:p-14">
+            <div className="liquid-panel mx-auto max-w-5xl rounded-[1.75rem] p-6 text-center sm:rounded-[2.5rem] sm:p-14">
               <p className="mx-auto max-w-3xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-                Something warm. Something real. Something that feels like you. This section is a
-                good place for a last promise, a thank you, or simply a sentence that she will
-                remember long after she closes the page.
+                I do not know what part of this you will keep with you, but I hope it is the
+                gentleness. I hope it is the care. I hope it is the feeling of being seen by
+                someone who thinks you are very, very easy to care about.
               </p>
             </div>
 
@@ -837,7 +839,7 @@ export default function GiftExperience() {
               {hiddenNotes.map((note, index) => (
                 <div
                   key={note}
-                  className="rounded-[1.4rem] border border-white/10 bg-white/6 p-4"
+                  className="liquid-panel rounded-[1.4rem] p-4"
                 >
                   <p className="text-[11px] uppercase tracking-[0.3em] text-white/55">
                     secret note 0{index + 1}

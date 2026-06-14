@@ -91,10 +91,10 @@ const eraShelf = [
 ];
 
 const hiddenClues = [
-  "the number she always notices first",
-  "the place that would mean everything to both of you",
-  "the color she somehow makes look effortless",
-  "the tiny detail only she would recognize",
+  "the lyric that secretly sounds like her",
+  "the place name only the two of you would immediately understand",
+  "the tiny detail about her that always catches you off guard",
+  "the clue she will notice faster than anyone else ever could",
 ];
 
 function formatTime(value: number) {
@@ -192,7 +192,7 @@ export default function SongStage() {
   return (
     <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
       <div className="space-y-3">
-        <div className="rounded-[1.5rem] border border-white/12 bg-white/6 p-5">
+        <div className="liquid-panel rounded-[1.5rem] p-5">
           <p className="text-xs uppercase tracking-[0.35em] text-rose-100/70">
             Eras Shelf
           </p>
@@ -200,7 +200,7 @@ export default function SongStage() {
             {eraShelf.map((era) => (
               <span
                 key={era.name}
-                className="rounded-full border border-white/12 bg-black/20 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-white/75"
+                className="liquid-pill rounded-full px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-white/75"
               >
                 {era.name} / {era.tone}
               </span>
@@ -216,10 +216,10 @@ export default function SongStage() {
               key={song.id}
               type="button"
               onClick={() => setSelectedSongId(song.id)}
-              className={`w-full rounded-[1.5rem] border p-5 text-left transition ${
+              className={`w-full rounded-[1.5rem] p-5 text-left transition ${
                 isSelected
-                  ? "border-white bg-white text-[#23040f]"
-                  : "border-white/12 bg-white/5 text-white hover:bg-white/10"
+                  ? "liquid-panel bg-white/88 text-[#23040f]"
+                  : "liquid-panel text-white hover:bg-white/10"
               }`}
             >
               <p className="text-xs uppercase tracking-[0.35em] opacity-70">Song</p>
@@ -235,10 +235,10 @@ export default function SongStage() {
       </div>
 
       <section
-        className={`overflow-hidden rounded-[1.75rem] border border-white/12 bg-gradient-to-br ${selectedSong.accent} p-5 shadow-[0_24px_90px_rgba(0,0,0,0.25)] sm:p-6`}
+        className={`liquid-panel overflow-hidden rounded-[1.75rem] bg-gradient-to-br ${selectedSong.accent} p-5 sm:p-6`}
       >
         <div className="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[1.5rem] border border-white/10 bg-black/25 p-5 backdrop-blur">
+          <div className="liquid-panel rounded-[1.5rem] bg-black/20 p-5">
             <div className="flex items-start gap-4">
               <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25">
                 {selectedSong.coverUrl ? (
@@ -265,7 +265,7 @@ export default function SongStage() {
                   {selectedSong.bracelet.map((bead) => (
                     <span
                       key={bead}
-                      className="rounded-full border border-white/12 bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-[0.24em] text-white/80"
+                      className="liquid-pill rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.24em] text-white/80"
                     >
                       {bead}
                     </span>
@@ -292,7 +292,7 @@ export default function SongStage() {
                   <source src={selectedSong.mediaUrl} />
                 </video>
               ) : (
-                <div className="rounded-[1.5rem] border border-white/10 bg-black/30 p-6">
+                <div className="liquid-panel rounded-[1.5rem] bg-black/25 p-6">
                   <audio
                     ref={(element) => {
                       mediaRef.current = element;
@@ -326,7 +326,7 @@ export default function SongStage() {
                   type="button"
                   onClick={() => void togglePlayback()}
                   disabled={!hasMedia}
-                  className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#23040f] transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-45"
+                  className="liquid-pill flex h-14 w-14 items-center justify-center rounded-full bg-white/88 text-sm font-semibold text-[#23040f] transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-45"
                 >
                   {isPlaying ? "Pause" : "Play"}
                 </button>
@@ -356,7 +356,7 @@ export default function SongStage() {
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-white/10 bg-black/25 p-5 backdrop-blur">
+          <div className="liquid-panel rounded-[1.5rem] bg-black/20 p-5">
             <p className="text-xs uppercase tracking-[0.4em] text-rose-100/70">Live Lyrics</p>
             <div className="mt-5 max-h-[28rem] space-y-4 overflow-y-auto pr-2">
               {selectedSong.lyrics.map((line, index) => {
@@ -370,7 +370,7 @@ export default function SongStage() {
                     }}
                     className={`rounded-[1.25rem] px-4 py-3 text-base leading-8 transition sm:text-lg ${
                       isActive
-                        ? "bg-white text-[#23040f] shadow-[0_10px_30px_rgba(255,255,255,0.12)]"
+                        ? "liquid-pill bg-white/88 text-[#23040f] shadow-[0_10px_30px_rgba(255,255,255,0.12)]"
                         : "text-white/55"
                     }`}
                   >
@@ -382,7 +382,7 @@ export default function SongStage() {
           </div>
         </div>
 
-        <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
+        <div className="liquid-panel mt-5 rounded-[1.5rem] bg-black/10 p-5">
           <p className="text-xs uppercase tracking-[0.4em] text-rose-100/70">
             Hidden Clues
           </p>
@@ -390,7 +390,7 @@ export default function SongStage() {
             {hiddenClues.map((clue, index) => (
               <div
                 key={clue}
-                className="rounded-[1.25rem] border border-white/10 bg-white/8 p-4"
+                className="liquid-panel rounded-[1.25rem] p-4"
               >
                 <p className="text-[11px] uppercase tracking-[0.3em] text-white/55">
                   clue 0{index + 1}
@@ -400,8 +400,8 @@ export default function SongStage() {
             ))}
           </div>
           <p className="mt-4 text-xs leading-6 text-white/55">
-            Replace these with little references only she would understand, and the page will
-            feel much more personal.
+            Replace these with tiny references only she would catch, and this page will feel a
+            lot more like it was made specifically for her.
           </p>
         </div>
       </section>
