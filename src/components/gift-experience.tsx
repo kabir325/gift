@@ -189,12 +189,10 @@ async function trackAnswer({
 
   const payload = (await response.json()) as {
     error?: string;
-    debugMessage?: string;
   };
 
   if (!response.ok) {
-    const parts = [payload.error, payload.debugMessage].filter(Boolean);
-    throw new Error(parts.join(" ") || "Could not save this answer.");
+    throw new Error(payload.error || "Could not save this answer.");
   }
 }
 

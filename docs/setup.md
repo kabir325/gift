@@ -32,12 +32,42 @@ Copy `.env.example` to `.env.local` and set:
 - `DASHBOARD_ACCESS_KEY`: password for `/dashboard`
 - `UPSTASH_REDIS_REST_URL`: Upstash REST URL
 - `UPSTASH_REDIS_REST_TOKEN`: Upstash REST token
+- `UPSTASH_REDIS_KEY`: Redis list key for answers, defaults to `gift:answers`
 
 ## Local fallback
 
 If Upstash is not configured, answers are saved to a local file in `data/submissions.json`.
 
 This is useful for local development only. It is not durable after deployment on most serverless hosts.
+
+On Vercel without Upstash, the site still works, but answer tracking is disabled until the Upstash env vars are added.
+
+## Upstash setup
+
+1. Create a Redis database in Upstash.
+2. Open the database details page.
+3. Copy:
+   - `UPSTASH_REDIS_REST_URL`
+   - `UPSTASH_REDIS_REST_TOKEN`
+4. Pick a dashboard password and set `DASHBOARD_ACCESS_KEY`.
+5. Optionally keep `UPSTASH_REDIS_KEY=gift:answers` unless you want a custom key.
+
+## Vercel env vars for tracking
+
+Add these in your Vercel project settings:
+
+- `UPSTASH_REDIS_REST_URL`
+- `UPSTASH_REDIS_REST_TOKEN`
+- `UPSTASH_REDIS_KEY`
+- `DASHBOARD_ACCESS_KEY`
+
+After saving them, redeploy the project.
+
+## How tracking works
+
+- Each answer from the three question screens is pushed into Upstash as a JSON string.
+- The dashboard reads the most recent answers from the same Redis list.
+- If Upstash is configured correctly, the deployed site records answers and the dashboard can display them.
 
 ## Asset plan
 
