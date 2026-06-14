@@ -38,11 +38,14 @@ const eraBracelet = [
 ];
 
 const hiddenNotes = [
-  "you somehow make softness look effortless",
-  "there are songs I cannot hear normally anymore because of you",
-  "you are in so many of my favorite little thoughts",
-  "if this feels like a clue, it probably is meant for you",
+  "maybe this was never the ending, just the part where we needed time",
+  "if two hearts still turn back toward each other, maybe that means something",
+  "some stories do not ask for perfection, only one brave try in the right direction",
+  "if this is our last week to really see, then maybe it is worth seeing properly",
 ];
+
+const finalPageMessage =
+  "I know you want a fresh start to things, and I really do understand that. But if even a small part of you is thinking about giving this another try, I honestly feel like it could be different now.\n\nA considerable amount of time has passed since the last time. We have both changed, we have both grown, and somehow I still feel like there is a soft side in us for each other that never fully disappeared.\n\nSo maybe we give it one last week. Just one honest week. If it feels like it is moving somewhere good, somewhere real, then we continue. And if it does not, we let it go without forcing anything.\n\nThere is no harm in trying carefully. But there might always be a little regret in not trying at all.";
 
 const questions: Question[] = [
   {
@@ -65,7 +68,7 @@ const questions: Question[] = [
 const slides = [
   {
     title: "I Love You",
-    text: "Let me remove the word 'love' between I and You.\n\n How can love follow the word I?\n\n And how can it come before You? \n\n As when there's love, what else is there except love? \n\n And when there is You, I forget about myself and even about love itself."
+    text: "Let me remove the word 'love' between I and You. \n\n How can love follow the word I? \n And how can it come before You? \n\n As when there's love, what else is there except love? \n\n And when there is You, I forget about myself and even about love itself."
   },
   {
     title: "What I Hope Reaches You",
@@ -701,10 +704,8 @@ export default function GiftExperience() {
         >
           <div className="space-y-5">
             <div className="liquid-panel mx-auto max-w-5xl rounded-[1.75rem] p-6 text-center sm:rounded-[2.5rem] sm:p-14">
-              <p className="mx-auto max-w-3xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                I do not know what part of this you will keep with you, but I hope it is the
-                gentleness. I hope it is the care. I hope it is the feeling of being seen by
-                someone who thinks you are very, very easy to care about.
+              <p className="mx-auto max-w-3xl whitespace-pre-line text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                {finalPageMessage}
               </p>
               {whatsappLink ? (
                 <a
