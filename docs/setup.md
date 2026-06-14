@@ -26,6 +26,7 @@ Copy `.env.example` to `.env.local` and set:
 - `NEXT_PUBLIC_SONG_TWO_COVER_URL`: cover image URL for the second song card
 - `NEXT_PUBLIC_SONG_THREE_URL`: audio or video URL for the third song performance
 - `NEXT_PUBLIC_SONG_THREE_COVER_URL`: cover image URL for the third song card
+- `NEXT_PUBLIC_WHATSAPP_LINK`: full WhatsApp chat link for the final page button
 - `RESEND_API_KEY`: API key from Resend
 - `NOTIFY_TO_EMAIL`: your email address
 - `NOTIFY_FROM_EMAIL`: verified sender in Resend
@@ -112,6 +113,14 @@ After saving them, redeploy the project.
 3. Copy the hosted URLs into `.env.local`.
 4. In Vercel, open the project settings and add the same env vars there.
 5. Redeploy after changing env vars.
+
+## WhatsApp button
+
+- The final page supports a WhatsApp button if `NEXT_PUBLIC_WHATSAPP_LINK` is set.
+- Use a full link like:
+  - `https://wa.me/15551234567`
+  - `https://wa.me/15551234567?text=hey`
+- Add the same value to Vercel env vars before redeploying.
 
 ## Suggested media hosts
 

@@ -11,7 +11,6 @@ type Stage =
   | "goodbye-mind"
   | "video"
   | "slides"
-  | "timeline"
   | "letters"
   | "songs"
   | "final";
@@ -20,13 +19,6 @@ type Question = {
   id: "talk" | "week" | "sure";
   prompt: string;
   note: string;
-};
-
-type TimelineMoment = {
-  id: string;
-  label: string;
-  title: string;
-  detail: string;
 };
 
 type Letter = {
@@ -89,37 +81,6 @@ const slides = [
   },
 ];
 
-const timelineMoments: TimelineMoment[] = [
-  {
-    id: "m1",
-    label: "01",
-    title: "The First Ease",
-    detail:
-      "There was a point where talking to you stopped feeling ordinary and started feeling like relief. That is the moment I always come back to first.",
-  },
-  {
-    id: "m2",
-    label: "02",
-    title: "The Shift",
-    detail:
-      "Somewhere along the way, without any warning, you became part of the way I thought about my days. It happened quietly. It mattered a lot.",
-  },
-  {
-    id: "m3",
-    label: "03",
-    title: "My Favorite Version Of Us",
-    detail:
-      "It might be one look, one laugh, one drive, one conversation, or one completely ordinary moment that still glows in my head for no reason except that it had you in it.",
-  },
-  {
-    id: "m4",
-    label: "04",
-    title: "Right Here",
-    detail:
-      "This part is not about forcing an ending or a promise. It is just me meeting this moment honestly and hoping you can feel how carefully I am trying to hold it.",
-  },
-];
-
 const letters: Letter[] = [
   {
     id: "l1",
@@ -169,7 +130,6 @@ const goodbyeMessages = {
 const revealStages: Exclude<Stage, "questions" | "goodbye-talk" | "goodbye-mind">[] = [
   "video",
   "slides",
-  "timeline",
   "letters",
   "songs",
   "final",
@@ -413,7 +373,6 @@ function StageNavigation({
 export default function GiftExperience() {
   const [step, setStep] = useState(0);
   const [stage, setStage] = useState<Stage>("questions");
-  const [selectedMomentId, setSelectedMomentId] = useState(timelineMoments[0].id);
   const [selectedLetterId, setSelectedLetterId] = useState(letters[0].id);
   const [selectedSlide, setSelectedSlide] = useState(0);
   const [hasVideoEnded, setHasVideoEnded] = useState(false);
@@ -429,14 +388,13 @@ export default function GiftExperience() {
 
   const sessionId = useMemo(() => crypto.randomUUID(), []);
   const currentQuestion = questions[step];
-  const selectedMoment =
-    timelineMoments.find((moment) => moment.id === selectedMomentId) ?? timelineMoments[0];
   const selectedLetter =
     letters.find((letter) => letter.id === selectedLetterId) ?? letters[0];
   const currentSlide = slides[selectedSlide] ?? slides[0];
 
   const messageVideoUrl = process.env.NEXT_PUBLIC_MESSAGE_VIDEO_URL;
   const backgroundVideoUrl = process.env.NEXT_PUBLIC_BACKGROUND_VIDEO_URL;
+  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_LINK;
 
   function unlockExperience() {
     window.sessionStorage.setItem("gift-pin-unlocked", "true");
@@ -658,7 +616,7 @@ export default function GiftExperience() {
             <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
               {currentSlide.title}
             </h2>
-            <p className="mt-5 text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
+            <p className="mt-5 whitespace-pre-line text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
               {currentSlide.text}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -683,58 +641,6 @@ export default function GiftExperience() {
             </div>
           </article>
           <StageNavigation stage="slides" onBack={goToPreviousStage} onNext={goToNextStage} />
-        </PageShell>
-      ) : null}
-
-      {stage === "timeline" ? (
-        <PageShell
-          eyebrow="Timeline"
-          title="The quiet little timeline in my head."
-          description="Not every important thing is dramatic. Sometimes it is just a few small moments that refuse to leave."
-        >
-          <div className="grid gap-5 sm:gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="liquid-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-8">
-              <div className="relative flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-                {timelineMoments.map((moment, index) => (
-                  <div key={moment.id} className="flex items-center gap-3 sm:gap-4">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedMomentId(moment.id)}
-                      className={`flex h-14 w-14 items-center justify-center rounded-full text-sm font-semibold transition ${
-                        selectedMomentId === moment.id
-                          ? "liquid-pill bg-white/88 text-[#290312]"
-                          : "liquid-pill text-white hover:bg-white/12"
-                      }`}
-                    >
-                      {moment.label}
-                    </button>
-                    {index < timelineMoments.length - 1 ? (
-                      <div className="h-px flex-1 bg-white/18 sm:w-20 sm:flex-none" />
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-
-              <article className="liquid-panel mt-6 rounded-[1.25rem] p-5 sm:mt-8 sm:rounded-[1.5rem] sm:p-6">
-                <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
-                  Selected Moment
-                </p>
-                <h2 className="mt-3 text-2xl font-semibold text-white">
-                  {selectedMoment.title}
-                </h2>
-                <p className="mt-4 text-sm leading-7 text-white/78">{selectedMoment.detail}</p>
-              </article>
-            </div>
-
-            <div className="liquid-panel flex items-center rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-8">
-              <p className="text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
-                If you want this page to really land, replace each of these with one real memory:
-                a moment, a place, a sentence she said, or a version of her laugh you still
-                remember.
-              </p>
-            </div>
-          </div>
-          <StageNavigation stage="timeline" onBack={goToPreviousStage} onNext={goToNextStage} />
         </PageShell>
       ) : null}
 
@@ -800,6 +706,16 @@ export default function GiftExperience() {
                 gentleness. I hope it is the care. I hope it is the feeling of being seen by
                 someone who thinks you are very, very easy to care about.
               </p>
+              {whatsappLink ? (
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="liquid-pill mt-8 inline-flex rounded-full border border-white/20 bg-white/14 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/20"
+                >
+                  Text Me On WhatsApp
+                </a>
+              ) : null}
             </div>
 
             <div className="grid gap-4 lg:grid-cols-4">
