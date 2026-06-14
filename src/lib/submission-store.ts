@@ -15,6 +15,7 @@ const DATA_FILE = path.join(DATA_DIR, "submissions.json");
 const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
 const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 const ANSWERS_KEY = process.env.UPSTASH_REDIS_KEY ?? "gift:answers";
+const IS_VERCEL = Boolean(process.env.VERCEL);
 
 function hasUpstashConfig() {
   return Boolean(UPSTASH_URL && UPSTASH_TOKEN);
@@ -73,6 +74,12 @@ export async function saveSubmission(entry: SubmissionEntry) {
     };
   }
 
+  if (IS_VERCEL) {
+    return {
+      storage: "disabled",
+    };
+  }
+
   const entries = await readLocalEntries();
   entries.unshift(entry);
   await writeLocalEntries(entries.slice(0, 250));
@@ -102,9 +109,17 @@ export async function listSubmissions() {
       .filter((item): item is SubmissionEntry => item !== null);
   }
 
+  if (IS_VERCEL) {
+    return [];
+  }
+
   return readLocalEntries();
 }
 
 export function getStorageMode() {
-  return hasUpstashConfig() ? "upstash" : "local-file";
+  if (hasUpstashConfig()) {
+    return "upstash";
+  }
+
+  return IS_VERCEL ? "disabled" : "local-file";
 }

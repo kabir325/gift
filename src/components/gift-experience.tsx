@@ -187,8 +187,14 @@ async function trackAnswer({
     }),
   });
 
+  const payload = (await response.json()) as {
+    error?: string;
+    debugMessage?: string;
+  };
+
   if (!response.ok) {
-    throw new Error("Could not save this answer.");
+    const parts = [payload.error, payload.debugMessage].filter(Boolean);
+    throw new Error(parts.join(" ") || "Could not save this answer.");
   }
 }
 

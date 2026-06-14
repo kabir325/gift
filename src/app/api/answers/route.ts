@@ -37,11 +37,12 @@ export async function POST(request: Request) {
       storage: storage.storage,
       emailDelivered: email.delivered,
     });
-  } catch {
+  } catch (error) {
     return Response.json(
       {
         error: "Could not save the answer.",
         storage: getStorageMode(),
+        debugMessage: error instanceof Error ? error.message : "Unknown submission failure.",
       },
       { status: 500 },
     );
