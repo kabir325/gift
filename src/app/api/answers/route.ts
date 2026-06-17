@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 
-import { sendAnswerNotification } from "@/lib/notifications";
+import { sendAllYesNotification, sendAnswerNotification } from "@/lib/notifications";
 import { getStorageMode, saveSubmission } from "@/lib/submission-store";
 
 export const runtime = "nodejs";
@@ -31,11 +31,19 @@ export async function POST(request: Request) {
 
     const storage = await saveSubmission(entry);
     const email = await sendAnswerNotification(entry);
+    const allYesEmail =
+      body.questionId === "sure" && body.answer === "yes"
+        ? await sendAllYesNotification({
+            createdAt: entry.createdAt,
+            sessionId: entry.sessionId,
+          })
+        : { delivered: false };
 
     return Response.json({
       ok: true,
       storage: storage.storage,
       emailDelivered: email.delivered,
+      allYesEmailDelivered: allYesEmail.delivered,
     });
   } catch {
     return Response.json(

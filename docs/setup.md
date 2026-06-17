@@ -69,6 +69,8 @@ After saving them, redeploy the project.
 - Each answer from the three question screens is pushed into Upstash as a JSON string.
 - The dashboard reads the most recent answers from the same Redis list.
 - If Upstash is configured correctly, the deployed site records answers and the dashboard can display them.
+- If Resend is configured, each answer can send an email notification.
+- A dedicated email is also sent when she reaches the final `yes` on the third question, which means she said `yes` to all three.
 
 ## Asset plan
 
@@ -121,6 +123,7 @@ After saving them, redeploy the project.
   - `https://wa.me/15551234567`
   - `https://wa.me/15551234567?text=hey`
 - Add the same value to Vercel env vars before redeploying.
+- Once that env var is set, the `Text Me On WhatsApp` button on the last page opens your chat directly.
 
 ## Suggested media hosts
 

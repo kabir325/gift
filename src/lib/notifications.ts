@@ -56,3 +56,48 @@ export async function sendAnswerNotification({
     reason: response.ok ? null : "Resend rejected the request.",
   };
 }
+
+export async function sendAllYesNotification({
+  createdAt,
+  sessionId,
+}: {
+  createdAt: string;
+  sessionId: string;
+}) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const to = process.env.NOTIFY_TO_EMAIL;
+  const from = process.env.NOTIFY_FROM_EMAIL;
+
+  if (!apiKey || !to || !from) {
+    return {
+      delivered: false,
+      reason: "Email is not configured.",
+    };
+  }
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      subject: "She said yes to all 3 questions",
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.7; color: #241018;">
+          <h2 style="margin-bottom: 16px;">She said yes all the way through</h2>
+          <p>The full yes path was completed and the video page should now be unlocked.</p>
+          <p><strong>Time:</strong> ${escapeHtml(createdAt)}</p>
+          <p><strong>Session:</strong> ${escapeHtml(sessionId)}</p>
+        </div>
+      `,
+    }),
+  });
+
+  return {
+    delivered: response.ok,
+    reason: response.ok ? null : "Resend rejected the request.",
+  };
+}
