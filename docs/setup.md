@@ -20,13 +20,8 @@ Copy `.env.example` to `.env.local` and set:
 
 - `NEXT_PUBLIC_MESSAGE_VIDEO_URL`: direct URL for your talking video
 - `NEXT_PUBLIC_BACKGROUND_VIDEO_URL`: direct URL for the looping memory montage
-- `NEXT_PUBLIC_SONG_ONE_URL`: audio or video URL for the first song performance
-- `NEXT_PUBLIC_SONG_ONE_COVER_URL`: cover image URL for the first song card
-- `NEXT_PUBLIC_SONG_TWO_URL`: audio or video URL for the second song performance
-- `NEXT_PUBLIC_SONG_TWO_COVER_URL`: cover image URL for the second song card
-- `NEXT_PUBLIC_SONG_THREE_URL`: audio or video URL for the third song performance
-- `NEXT_PUBLIC_SONG_THREE_COVER_URL`: cover image URL for the third song card
 - `NEXT_PUBLIC_WHATSAPP_LINK`: full WhatsApp chat link for the final page button
+- `NEXT_PUBLIC_SPOTIFY_PLAYLIST_LINK`: full Spotify playlist link for the final page button
 - `RESEND_API_KEY`: API key from Resend
 - `NOTIFY_TO_EMAIL`: your email address
 - `NOTIFY_FROM_EMAIL`: verified sender in Resend
@@ -81,15 +76,13 @@ After saving them, redeploy the project.
   - `public/covers/`
 - Upload your main message video to a video host and paste the URL into `NEXT_PUBLIC_MESSAGE_VIDEO_URL`.
 - Upload your background montage video separately and paste the URL into `NEXT_PUBLIC_BACKGROUND_VIDEO_URL`.
-- Upload your singing recordings as either audio or video and paste them into the song URL variables.
-- Use the matching song cover URLs for artwork if you want the player to look more polished.
+- If you want music there too, use a Spotify playlist link on the final page instead of the old song player.
 
 ## What goes in the repo
 
 - Best for repo storage:
   - landing photos
   - gallery images
-  - song cover art
   - short decorative clips if they are very small
 - Avoid keeping these in the repo:
   - long talking videos
@@ -105,7 +98,7 @@ After saving them, redeploy the project.
   - photos in `public/` if they are small and mostly final
   - larger videos and audio on Cloudinary, Bunny, or Cloudflare R2
 - For your use case:
-  - use `public/` for small images and cover art
+  - use `public/` for small images
   - use an external host for the long message video, montage video, and song recordings
 
 ## How to manage photos and videos
@@ -125,26 +118,21 @@ After saving them, redeploy the project.
 - Add the same value to Vercel env vars before redeploying.
 - Once that env var is set, the `Text Me On WhatsApp` button on the last page opens your chat directly.
 
+## Spotify playlist button
+
+- The final page also supports a Spotify playlist button if `NEXT_PUBLIC_SPOTIFY_PLAYLIST_LINK` is set.
+- Use a full playlist URL like:
+  - `https://open.spotify.com/playlist/...`
+- Add the same value to Vercel env vars before redeploying.
+
 ## Suggested media hosts
 
 - Easiest: Cloudinary
 - Cheapest long-term: Cloudflare R2
 - Very simple for video delivery: Bunny Stream
 
-## Song and lyrics setup
-
-- The songs page supports both audio and video recordings.
-- Lyrics are timed manually in `src/components/song-stage.tsx`.
-- For each song:
-  - replace the title and artist
-  - set the media URL
-  - set the cover image URL
-  - edit the lyric lines and their `time` values
-- The highlighted lyric follows the playback time automatically.
-
 ## Suggested next content pass
 
 - Replace the placeholder photo panel with your real image
 - Rewrite the slide text in your own voice
-- Fill the timeline nodes with real memories
 - Replace the placeholder letters with actual letters from you
