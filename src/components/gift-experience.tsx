@@ -49,6 +49,9 @@ const hiddenNotes = [
 const finalPageMessage =
   "If you remember one thing from all of this, let it be that I came to you gently and sincerely.\n\nI know you wanted a fresh start to things, and I really do understand that. But if even a small part of you is still open to this, I honestly believe it could be different now. Enough time has passed for both of us to grow, to reflect, and to understand things more clearly.\n\nI am not asking for something huge all at once. I am only asking for one honest week. One week to talk properly, to see how it feels, and to notice whether there is still something here that feels safe, calm, and worth choosing.\n\nIf it feels right, we continue. If it does not, we let it go with honesty and peace. I just do not want us to leave something beautiful unexplored if there is still even a little bit of us left to try.";
 
+const playlistMessage =
+  "And one more tiny thing: I made you a playlist. Not randomly. Not just to add something pretty here. I picked these songs with you in mind, with us in mind, and with all the little feelings I still do not always know how to say properly.\n\nIf you open it, please listen slowly. There is a lot of me in there.";
+
 const questions: Question[] = [
   {
     id: "talk",
@@ -687,25 +690,57 @@ export default function GiftExperience() {
               <p className="mx-auto max-w-3xl whitespace-pre-line text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
                 {finalPageMessage}
               </p>
-              {whatsappLink ? (
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="liquid-pill mt-8 inline-flex rounded-full border border-white/20 bg-white/14 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/20"
-                >
-                  Text Me On WhatsApp
-                </a>
-              ) : null}
               {spotifyPlaylistLink ? (
-                <a
-                  href={spotifyPlaylistLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="liquid-pill mt-4 inline-flex rounded-full border border-white/20 bg-white/14 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/20"
-                >
-                  Open The Playlist
-                </a>
+                <div className="liquid-panel mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-white/12 bg-white/[0.08] p-5 text-left sm:rounded-[2rem] sm:p-6">
+                  <p className="text-[11px] uppercase tracking-[0.34em] text-rose-200/80">
+                    Made For You
+                  </p>
+                  <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">
+                    I made this playlist specially for you.
+                  </h3>
+                  <p className="mt-3 whitespace-pre-line text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
+                    {playlistMessage}
+                  </p>
+                  <a
+                    href={spotifyPlaylistLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group liquid-pill mt-5 inline-flex w-full items-center justify-between rounded-[1.25rem] border border-emerald-300/20 bg-[linear-gradient(135deg,rgba(48,213,120,0.18),rgba(255,255,255,0.08))] px-5 py-4 text-left text-white transition hover:bg-[linear-gradient(135deg,rgba(48,213,120,0.26),rgba(255,255,255,0.12))] sm:w-auto sm:min-w-[18rem]"
+                  >
+                    <span>
+                      <span className="block text-[11px] uppercase tracking-[0.28em] text-emerald-100/80">
+                        Spotify
+                      </span>
+                      <span className="mt-1 block text-sm font-semibold uppercase tracking-[0.12em]">
+                        Open The Playlist
+                      </span>
+                    </span>
+                    <span className="text-lg transition group-hover:translate-x-1">{"->"}</span>
+                  </a>
+                </div>
+              ) : null}
+              {whatsappLink ? (
+                <div className="mx-auto mt-5 max-w-3xl">
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group liquid-pill inline-flex w-full items-center justify-between rounded-[1.5rem] border border-white/16 bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.08))] px-5 py-4 text-left text-white transition hover:bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.1))] sm:px-6 sm:py-5"
+                  >
+                    <span>
+                      <span className="block text-[11px] uppercase tracking-[0.3em] text-rose-100/75">
+                        If You Want To
+                      </span>
+                      <span className="mt-1 block text-sm font-semibold uppercase tracking-[0.12em]">
+                        Text Me On WhatsApp
+                      </span>
+                      <span className="mt-2 block text-sm leading-6 text-white/72 normal-case tracking-normal">
+                        If you feel like saying anything at all after this, I would really love to hear from you.
+                      </span>
+                    </span>
+                    <span className="text-lg transition group-hover:translate-x-1">{"->"}</span>
+                  </a>
+                </div>
               ) : null}
             </div>
 
