@@ -8,7 +8,6 @@ type Stage =
   | "goodbye-talk"
   | "goodbye-mind"
   | "video"
-  | "slides"
   | "understand"
   | "changed"
   | "not-asking"
@@ -41,49 +40,30 @@ const eraBracelet = [
 ];
 
 const hiddenNotes = [
-  "some endings only look final when you read them too quickly.",
-  "maybe some hearts just take the long road back to each other.",
-  "if this becomes a second beginning, let it be softer than the first.",
-  "I am not asking for forever tonight, only for one honest try.",
+  "maybe this was never the ending, only the pause before we found our way back.",
+  "some hearts are still soft for each other even after all the silence.",
+  "if this becomes a second beginning, I want it to feel gentler than the first.",
+  "I am not asking for forever tonight, only one honest chance with you.",
 ];
 
 const finalPageMessage =
-  "I know you wanted a fresh start to things, and I really do understand that.\n\nBut if even a small part of you is still open to this, I honestly believe it could be different now. Enough time has passed for both of us to change, learn, and see things more clearly.\n\nI am not asking for something big all at once. I am only asking for one honest week. One week to talk properly, to notice how it feels, and to see whether there is still something here that feels peaceful, real, and worth choosing.\n\nIf it feels right, we continue. If it does not, we let it go gently and with clarity. I just do not want us to walk away from something that could still be beautiful without giving it one fair chance.";
+  "If you remember one thing from all of this, let it be that I came to you gently and sincerely.\n\nI know you wanted a fresh start to things, and I really do understand that. But if even a small part of you is still open to this, I honestly believe it could be different now. Enough time has passed for both of us to grow, to reflect, and to understand things more clearly.\n\nI am not asking for something huge all at once. I am only asking for one honest week. One week to talk properly, to see how it feels, and to notice whether there is still something here that feels safe, calm, and worth choosing.\n\nIf it feels right, we continue. If it does not, we let it go with honesty and peace. I just do not want us to leave something beautiful unexplored if there is still even a little bit of us left to try.";
 
 const questions: Question[] = [
   {
     id: "talk",
     prompt: "Did you have the talk you were to have?",
-    note: "Take your time. Nothing here is rushing you.",
+    note: "Take your time, pretty girl. Nothing here is rushing you.",
   },
   {
     id: "week",
     prompt: "Are you okay with the one week thing?",
-    note: "No pressure at all. I only want the most honest answer from you.",
+    note: "No pressure at all. I only want the answer that feels truest to your heart.",
   },
   {
     id: "sure",
     prompt: "Are you really sure?",
-    note: "This is me pausing for one second and asking with my whole heart.",
-  },
-];
-
-const slides = [
-  {
-    title: "I Love You",
-    text: "Let me remove the word 'love' between I and You.\n\nHow can love follow the word I?\nAnd how can it come before You?\n\nAs when there's love, what else is there except love?\n\nAnd when there is You, I forget about myself and even about love itself.",
-  },
-  {
-    title: "What I Hope Reaches You",
-    text: "I hope this feels gentle.\nI hope it feels sincere.\nMore than anything, I hope it feels like being seen with care by someone who truly means every word.",
-  },
-  {
-    title: "Why I Made This",
-    text: "I did not want to say any of this in a rushed way.\n\nI wanted one place for the tenderness, the honesty, and all the little things about you that stay with me longer than they should.",
-  },
-  {
-    title: "Whatever Happens",
-    text: "Whatever this becomes, I wanted there to be one place where you could clearly see this:\n\nyou have been deeply, quietly, and beautifully important to me.\n\nThat part has always been true.",
+    note: "This is me pausing for one second and asking you with all the softness in my heart.",
   },
 ];
 
@@ -94,9 +74,9 @@ const reflectionPages = {
     description:
       "I know things cannot restart by pretending the past did not happen, and I am not trying to do that here.",
     body: [
-      "What went wrong before cannot be fixed by pretty words alone. I understand that more clearly now than I did then.",
+      "What went wrong before cannot be fixed by pretty words alone. I understand that much more clearly now than I did then.",
       "I understand that hurt changes the way trust feels. Even if care is still there, safety does not automatically come back just because two people miss each other.",
-      "I also understand that some of what became heavy between us was not just circumstance. It was timing, communication, the things left unsaid, and the softness we did not always protect well enough.",
+      "I also understand that love needs gentleness, patience, and better timing than we sometimes gave it before.",
     ],
   },
   changed: {
@@ -106,7 +86,7 @@ const reflectionPages = {
       "I do not want to say I have changed without telling you what that actually means.",
     body: [
       "I think more before I react now. I have become less interested in being right and more interested in being clear, calm, and kind.",
-      "I understand communication differently now. Not just saying what I feel, but saying it in a way that does not make the other person carry unnecessary weight.",
+      "I understand communication differently now. Not just saying what I feel, but saying it in a way that does not leave the other person carrying unnecessary heaviness.",
       "I have more patience than I used to, and more perspective too. Enough to know that if something matters, it should feel steady, not chaotic.",
     ],
     bullets: [
@@ -147,7 +127,7 @@ const reflectionPages = {
     eyebrow: "If We Try Again",
     title: "If We Try Again, I Want It To Feel Like This",
     description:
-      "This is the version of it I would want. Not loud. Not messy. Just good in the ways that matter.",
+      "This is the version of it I would want. Not loud. Not messy. Just soft and good in the ways that matter.",
     body: [
       "Safe.",
       "Calm.",
@@ -167,12 +147,12 @@ const reflectionPages = {
     eyebrow: "One Chance",
     title: "If I Could Ask For Just One Chance",
     description:
-      "This is the most sincere version of what I want to say.",
+      "This is the most sincere version of what I want to say to you.",
     body: [
-      "I still care because what I feel for you did not disappear just because time passed. It changed shape maybe, but it never stopped being real to me.",
+      "I still care because what I feel for you did not disappear just because time passed. It may have changed shape, but it never stopped being real to me.",
       "What I learned is that care is not enough by itself. It has to come with steadiness, patience, honesty, and the ability to make the other person feel safe.",
-      "Why I think this could be different now is not only because I want it. It is because I genuinely think we are not the exact same people we were before, and that matters.",
-      "And if you still say no, I want you to know you would be safe doing that too. I would respect it. Because if this ever happens again, I want it to be chosen freely, not emotionally forced.",
+      "Why I think this could be different now is not only because I want it. It is because I genuinely think we are not the exact same people we were before, and I think that matters.",
+      "And if you still say no, I want you to know you would be safe doing that too. I would respect it. Because if this ever happens again, I want it to be chosen freely, softly, and without force.",
     ],
   },
 } as const;
@@ -183,30 +163,21 @@ const letters: Letter[] = [
     title: "If You Read This Slowly",
     excerpt: "The soft beginning. The part where I just tell the truth.",
     body:
-      "I made this because I wanted to give my feelings somewhere gentler to live. Not inside a rushed paragraph. Not inside an awkward conversation. Just here, with enough room for me to tell you that you matter to me in a way that has stayed quiet, constant, and very real.",
+      "I made this because I wanted to give my feelings somewhere gentler to live. Not inside a rushed paragraph. Not inside an awkward conversation. Just here, with enough room for me to tell you that you matter to me in a way that has stayed quiet, constant, and very real.\n\nYou have been on my mind in the softest ways, and if I am honest, a part of me has still been hoping there might be one more beautiful chance for us.",
   },
   {
     id: "l2",
     title: "What Stays With Me About You",
     excerpt: "The details that sound small until you realize they are not.",
     body:
-      "It is the small things for me. The way you carry yourself. The way your presence changes the feeling of a room. The softness in the way you are, even when you are trying not to show it. Some people are easy to admire, but somehow you are also impossible not to miss after. There is something about you that lingers.",
+      "It is the small things for me. The way you speak. The way your presence changes the feeling of a room. The softness you carry even when you pretend not to.\n\nSome people are easy to admire, but somehow you are also impossible not to miss after. There is something about you that lingers in the sweetest way.",
   },
   {
     id: "l3",
     title: "One Note I Needed You To Read",
     excerpt: "The most delicate thing I wanted to leave with you.",
     body:
-      `"I love you
-
-Let me remove the word 'love' between I and You.
-
-How can love follow the word I?
-And how can it come before You?
-
-As when there's love, what else is there except love?
-
-And when there is You, I forget about myself and even about love itself."`,
+      "If I say I miss you, it still feels too small.\nIf I say I care, that still does not cover it.\n\nSo let me just say this as simply as I can:\nthere is still a part of my heart that turns toward you very naturally, very softly, and very completely.\n\nMaybe that means something.\nMaybe it means there is still a little bit of us left worth listening to.\n\nAnd maybe, if you can feel even a small part of that too, this is not the end of our story after all.",
   },
 ];
 
@@ -214,18 +185,17 @@ const goodbyeMessages = {
   talk: {
     title: "Come back once you've had that talk.",
     copy:
-      "This will still be here when the time is right. No guilt, no pressure, no hard feelings. Just come back when that conversation has happened and your heart feels settled enough to return.",
+      "This will still be here when the time is right. No guilt, no pressure, no hard feelings. Just come back when that conversation has happened and your heart feels a little lighter and more settled.",
   },
   mind: {
     title: "If you ever change your mind, come back to this page.",
     copy:
-      "Take care of yourself, be gentle with your heart, and know this was made with a lot of sincerity. Goodbye for now, and thank you for getting this far.",
+      "Take care of yourself, be gentle with your heart, and know this was made with a lot of sincerity and softness. Goodbye for now, and thank you for reading this far.",
   },
 };
 
 const revealStages: Exclude<Stage, "questions" | "goodbye-talk" | "goodbye-mind">[] = [
   "video",
-  "slides",
   "understand",
   "changed",
   "not-asking",
@@ -417,7 +387,6 @@ export default function GiftExperience() {
   const [step, setStep] = useState(0);
   const [stage, setStage] = useState<Stage>("questions");
   const [selectedLetterId, setSelectedLetterId] = useState(letters[0].id);
-  const [selectedSlide, setSelectedSlide] = useState(0);
   const [hasVideoEnded, setHasVideoEnded] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -426,7 +395,6 @@ export default function GiftExperience() {
   const currentQuestion = questions[step];
   const selectedLetter =
     letters.find((letter) => letter.id === selectedLetterId) ?? letters[0];
-  const currentSlide = slides[selectedSlide] ?? slides[0];
   const currentReflectionPage =
     stage in reflectionPages
       ? reflectionPages[stage as keyof typeof reflectionPages]
@@ -581,7 +549,7 @@ export default function GiftExperience() {
         <PageShell
           eyebrow="The Reveal"
           title="Welcome. You have no idea how much it means to me that you are here."
-          description="If you stayed and said yes all the way here, thank you. What comes next is just me trying to say everything a little more carefully, a little more clearly, and with all the sincerity I have."
+          description="If you stayed and said yes all the way here, thank you. What comes next is just me trying to say everything a little more carefully, a little more clearly, and with all the softness and sincerity I have."
         >
           <div className="relative isolate overflow-hidden rounded-[2rem]">
             {backgroundVideoUrl ? (
@@ -635,69 +603,28 @@ export default function GiftExperience() {
         </PageShell>
       ) : null}
 
-      {stage === "slides" ? (
-        <PageShell
-          eyebrow="Slides"
-          title="The things I wanted you to feel, one page at a time."
-          description="Not rushed. Not crowded. Just a few small pages for the parts that matter most to me."
-        >
-          <article className="liquid-panel mx-auto max-w-4xl rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-10">
-            <p className="text-xs uppercase tracking-[0.35em] text-rose-200/75">
-              Slide {selectedSlide + 1} of {slides.length}
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-4xl">
-              {currentSlide.title}
-            </h2>
-            <p className="mt-5 whitespace-pre-line text-sm leading-7 text-white/78 sm:mt-6 sm:text-base sm:leading-8">
-              {currentSlide.text}
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button
-                type="button"
-                onClick={() => setSelectedSlide((value) => Math.max(0, value - 1))}
-                disabled={selectedSlide === 0}
-                className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
-              >
-                Previous Slide
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  setSelectedSlide((value) => Math.min(slides.length - 1, value + 1))
-                }
-                disabled={selectedSlide === slides.length - 1}
-                className="liquid-pill w-full rounded-full px-5 py-4 text-sm font-medium text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:py-3"
-              >
-                Next Slide
-              </button>
-            </div>
-          </article>
-          <StageNavigation stage="slides" onBack={goToPreviousStage} onNext={goToNextStage} />
-        </PageShell>
-      ) : null}
-
       {stage === "letters" ? (
         <PageShell
           eyebrow="Letters"
           title="The letters I would rather hand to you slowly."
-          description="This is the softer part. The part that sounds most like me when I stop trying too hard and just tell the truth."
+          description="This is the softer part. The part that sounds most like me when I stop trying too hard and just tell you the truth."
         >
           <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="grid gap-4">
+            <div className="grid gap-3">
               {letters.map((letter) => (
                 <button
                   key={letter.id}
                   type="button"
                   onClick={() => setSelectedLetterId(letter.id)}
-                  className={`rounded-[1.5rem] p-6 text-left transition ${
+                  className={`rounded-[1.25rem] p-4 text-left transition sm:p-5 ${
                     selectedLetterId === letter.id
                       ? "liquid-panel bg-white/88 text-[#23040f]"
                       : "liquid-panel text-white hover:bg-white/10"
                   }`}
                 >
                   <p className="text-xs uppercase tracking-[0.35em] opacity-70">Letter</p>
-                  <h2 className="mt-3 text-2xl font-semibold">{letter.title}</h2>
-                  <p className="mt-3 text-sm leading-7 opacity-80">{letter.excerpt}</p>
+                  <h2 className="mt-2 text-lg font-semibold sm:text-xl">{letter.title}</h2>
+                  <p className="mt-2 text-sm leading-6 opacity-80">{letter.excerpt}</p>
                 </button>
               ))}
             </div>
@@ -753,7 +680,7 @@ export default function GiftExperience() {
         <PageShell
           eyebrow="Last Page"
           title="If you remember one thing from all of this, let it be this."
-          description="You have been worth the effort, the thought, and every careful word I wanted to get right."
+          description="You have been worth the effort, the thought, and every careful little word I wanted to get right."
         >
           <div className="space-y-5">
             <div className="liquid-panel mx-auto max-w-5xl rounded-[1.75rem] p-6 text-center sm:rounded-[2.5rem] sm:p-14">
